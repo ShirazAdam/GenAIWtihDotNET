@@ -1,0 +1,12 @@
+<Solution>
+  <Project Path="GenAI/GenAI.csproj" />
+  <Properties Name="TeamFoundationVersionControl">
+    <Property Name="SccEnterpriseProvider" Value="{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}" />
+    <Property Name="SccLocalPath0" Value="." />
+    <Property Name="SccLocalPath1" Value="GenAI" />
+    <Property Name="SccNumberOfProjects" Value="2" />
+    <Property Name="SccProjectName1" Value="GenAI" />
+    <Property Name="SccProjectUniqueName1" Value="GenAI\\GenAI.csproj" />
+    <Property Name="SccTeamFoundationServer" Value="https://dev.azure.com/shirazops" />
+  </Properties>
+</Solution>

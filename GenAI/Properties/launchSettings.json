@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GenAI": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
