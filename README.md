@@ -19,17 +19,18 @@ This project showcases a simple yet powerful implementation of running the Phi-3
 - .NET 10.0 or higher
 - Microsoft.ML.OnnxRuntimeGenAI NuGet package
 - Phi-3 ONNX model files (quantised INT4 model recommended)
+- Docker Desktop (optional, for containerised deployment)
 
 ## Installation
 
 1. Clone the repository:
-```bash
+```powershell
 git clone https://github.com/yourusername/GenAIWithDotNET.git
 cd GenAIWithDotNET/GenAI
 ```
 
 2. Install the required NuGet package:
-```bash
+```powershell
 dotnet add package Microsoft.ML.OnnxRuntimeGenAI
 ```
 
@@ -48,8 +49,10 @@ const string modelPath = @"D:\onnx\cpu_and_mobile\cpu-int4-rtn-block-32";
 
 ## Usage
 
+### Running Locally
+
 1. Run the application:
-```bash
+```powershell
 dotnet run
 ```
 
@@ -69,6 +72,27 @@ Next prompt:
 ```
 
 4. Continue the conversation or press Enter without text to exit.
+
+### Running with Docker
+
+The project includes a Dockerfile for containerised deployment using Windows containers.
+
+1. Build the Docker image:
+```powershell
+docker build -t genai-dotnet .
+```
+
+2. Run the container with the model mounted as a volume:
+```powershell
+docker run -it -v D:\onnx:C:\onnx genai-dotnet
+```
+
+**Note**: The Dockerfile uses Windows Nano Server base images. Ensure your Docker Desktop is configured for Windows containers. You'll need to mount your model directory as a volume and update the model path accordingly in the container.
+
+**Docker Configuration**:
+- Base image: `mcr.microsoft.com/dotnet/runtime:10.0-nanoserver-ltsc2022`
+- Build image: `mcr.microsoft.com/dotnet/sdk:10.0-nanoserver-ltsc2022`
+- Multi-stage build for optimised image size
 
 ## How It Works
 
@@ -98,9 +122,10 @@ Typical performance with INT4 quantisation: 40-100 tokens/second on modern CPUs.
 
 ## Technologies Used
 
-- **C# / .NET** - Core application framework
+- **C# / .NET 10.0** - Core application framework
 - **ONNX Runtime GenAI** - AI model inference engine
 - **Phi-3 Model** - Microsoft's small language model optimised for efficiency
+- **Docker** - Container platform for Windows Nano Server deployment
 
 ## Contributing
 
@@ -137,3 +162,13 @@ This project is licensed under the MIT Licence - see the LICENCE file for detail
 - Reduce the `max_length` parameter
 - Use a more aggressively quantised model
 - Close other applications to free up RAM
+
+**Issue**: Docker container fails to start
+- Ensure Docker Desktop is set to Windows containers mode
+- Verify the model volume mount path is correct
+- Check that Windows container features are enabled in Docker settings
+
+**Issue**: Cannot access model files in Docker
+- Ensure the volume is mounted correctly with `-v` flag
+- Update the model path in the code to match the container path
+- Verify file permissions on the host machine
