@@ -1,3 +1,5 @@
+[![.NET](https://github.com/ShirazAdam/GenAIWtihDotNET/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ShirazAdam/GenAIWtihDotNET/actions/workflows/dotnet.yml)
+
 # GenAI with .NET
 
 A console application demonstrating how to run generative AI models locally using Microsoft's ONNX Runtime GenAI with .NET.
