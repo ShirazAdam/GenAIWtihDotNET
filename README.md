@@ -37,7 +37,7 @@ dotnet add package Microsoft.ML.OnnxRuntimeGenAI
 ```
 
 3. Download the Phi-3 ONNX model:
-   - Visit [Microsoft's Phi-3 model page](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx)
+   - Visit [Microsoft's Phi-4 model page](https://huggingface.co/microsoft/Phi-4-mini-instruct-onnx)
    - Download the quantised model (e.g., `gpu-int4-rtn-block-32`)
    - Extract to a local directory
 
