@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "JobApplicationAgent": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
