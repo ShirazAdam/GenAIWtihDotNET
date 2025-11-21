@@ -36,7 +36,7 @@ dotnet add package Microsoft.ML.OnnxRuntimeGenAI
 
 3. Download the Phi-3 ONNX model:
    - Visit [Microsoft's Phi-3 model page](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx)
-   - Download the quantised model (e.g., `cpu-int4-rtn-block-32`)
+   - Download the quantised model (e.g., `gpu-int4-rtn-block-32`)
    - Extract to a local directory
 
 ## Configuration
@@ -44,7 +44,7 @@ dotnet add package Microsoft.ML.OnnxRuntimeGenAI
 Update the `modelPath` constant in `Program.cs` to point to your model directory:
 
 ```csharp
-const string modelPath = @"D:\onnx\cpu_and_mobile\cpu-int4-rtn-block-32";
+const string modelPath = @"D:\onnx\gpu\gpu-int4-rtn-block-32";
 ```
 
 ## Usage
