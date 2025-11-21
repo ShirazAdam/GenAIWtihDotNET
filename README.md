@@ -126,7 +126,7 @@ Typical performance with INT4 quantisation: 40-100 tokens/second on modern CPUs.
 
 - **C# / .NET 10.0** - Core application framework
 - **ONNX Runtime GenAI** - AI model inference engine
-- **Phi-3 Model** - Microsoft's small language model optimised for efficiency
+- **Phi-4 Model** - Microsoft's small language model optimised for efficiency
 - **Docker** - Container platform for Windows Nano Server deployment
 
 ## Contributing
@@ -140,12 +140,12 @@ This project is licensed under the MIT Licence - see the LICENCE file for detail
 ## Acknowledgements
 
 - Microsoft for the ONNX Runtime GenAI library
-- Microsoft for the Phi-3 model family
+- Microsoft for the Phi-4 model family
 
 ## Resources
 
 - [ONNX Runtime GenAI Documentation](https://onnxruntime.ai/docs/genai/)
-- [Phi-3 Model Information](https://azure.microsoft.com/en-us/products/phi-3)
+- [Phi-4 Model Information](https://azure.microsoft.com/en-gb/products/phi/)
 - [Microsoft ML .NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)
 
 ## Troubleshooting
